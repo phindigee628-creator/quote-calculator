@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant Quote Calculator | Sparkle Clean</title>
+  <meta name="description" content="Get an instant price for your home clean. Sample project built with HTML, CSS and JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="learning-banner">Learning project: a sample quote calculator for a made-up company, not a real business.</div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="brand">Sparkle Clean</p>
+      <h1>Get your cleaning quote in seconds</h1>
+      <p class="lead">Choose what you need and see your price straight away. No sign-up needed.</p>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <form id="quote-form" class="card" autocomplete="off">
+
+      <fieldset>
+        <legend><span class="step">1</span> Type of clean</legend>
+        <div class="options">
+          <label class="option">
+            <input type="radio" name="service" value="standard" checked>
+            <span class="option-box"><strong>Standard clean</strong><small>Dusting, floors, kitchen and bathrooms</small><em>from R300</em></span>
+          </label>
+          <label class="option">
+            <input type="radio" name="service" value="deep">
+            <span class="option-box"><strong>Deep clean</strong><small>Everything in standard, plus detail work</small><em>from R550</em></span>
+          </label>
+          <label class="option">
+            <input type="radio" name="service" value="moveout">
+            <span class="option-box"><strong>Move-out clean</strong><small>Empty home, ready for the next person</small><em>from R700</em></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="step">2</span> Size of your home</legend>
+        <div class="row">
+          <div class="field">
+            <label for="bedrooms">Bedrooms <span class="hint">(R80 each)</span></label>
+            <select id="bedrooms" name="bedrooms">
+              <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option>
+              <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bathrooms">Bathrooms <span class="hint">(R60 each)</span></label>
+            <select id="bathrooms" name="bathrooms">
+              <option value="1" selected>1</option><option value="2">2</option>
+              <option value="3">3</option><option value="4">4</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="step">3</span> Extras <span class="hint">(optional)</span></legend>
+        <div class="checks">
+          <label class="check"><input type="checkbox" name="extras" value="oven"> Inside oven <span>R150</span></label>
+          <label class="check"><input type="checkbox" name="extras" value="fridge"> Inside fridge <span>R120</span></label>
+          <label class="check"><input type="checkbox" name="extras" value="windows"> Inside windows <span>R200</span></label>
+          <label class="check"><input type="checkbox" name="extras" value="laundry"> Laundry and ironing <span>R100</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="step">4</span> How often?</legend>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="frequency" value="once" checked><span>Once-off</span></label>
+          <label class="pill"><input type="radio" name="frequency" value="monthly"><span>Monthly <small>5% off</small></span></label>
+          <label class="pill"><input type="radio" name="frequency" value="biweekly"><span>Every 2 weeks <small>10% off</small></span></label>
+          <label class="pill"><input type="radio" name="frequency" value="weekly"><span>Weekly <small>15% off</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="step">5</span> Your name <span class="hint">(optional)</span></legend>
+        <div class="field">
+          <label for="customer" class="sr-only">Your name</label>
+          <input type="text" id="customer" name="customer" placeholder="e.g. Thandi" maxlength="40">
+        </div>
+      </fieldset>
+    </form>
+
+    <aside class="card summary" aria-live="polite">
+      <h2>Your quote</h2>
+      <ul id="quote-lines" class="lines"></ul>
+      <div class="discount-row" id="discount-row" hidden>
+        <span id="discount-label">Discount</span>
+        <span id="discount-amount">-R0</span>
+      </div>
+      <div class="total-row">
+        <span>Total</span>
+        <strong id="total">R0</strong>
+      </div>
+      <p class="small" id="frequency-note">Price per visit.</p>
+      <a id="whatsapp-btn" class="btn" href="#" target="_blank" rel="noopener">Send quote on WhatsApp</a>
+      <button type="button" id="reset-btn" class="btn-secondary">Start again</button>
+      <p class="small">This is a sample. The WhatsApp number is made up.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Practice website built by Phindile Ziqubu while learning web development. Not a real business.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
