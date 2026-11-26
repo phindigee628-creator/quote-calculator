@@ -2,7 +2,7 @@
 
 A sample quote calculator for a made-up cleaning company called Sparkle Clean. It is **not a real business**.
 
-**Live site:** (paste your link here)
+**Live site:**  https://phindigee628-creator.github.io/quote-calculator/
 
 **Built with:** HTML, CSS and JavaScript
 
